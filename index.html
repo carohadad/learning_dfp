@@ -48,6 +48,17 @@
       });
     </script>
 
+    <script>
+        function toogleDiv() {
+            var x = document.getElementById("initially-hidden");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
             
 
 </head>
@@ -99,10 +110,12 @@
         </div>
 
     
-        <a class="waves-effect waves-light btn">Toogle hide/show  Div</a>
+        <a class="waves-effect waves-light btn" onclick="toogleDiv()">Toogle hide/show  Div</a>
 
 
-        <div>
+        <div id="initially-hidden" style="display:none;">
+
+            <p> Acá hay otro contenido </p>
 
             <!-- /6075/carolinahadad.com -->
             <div id='div-gpt-ad-slot-hidden'>
