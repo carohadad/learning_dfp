@@ -19,40 +19,41 @@
     <script>
         var googletag = googletag || {};
         googletag.cmd = googletag.cmd || [];
+
     </script>
 
     <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/6075/carolinahadad.com', [[468, 60], [300, 250], [728, 90]], 'div-gpt-ad-slot-1').addService(googletag.pubads());
 
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
+        googletag.cmd.push(function() {
+            var slot_1 = googletag.defineSlot('/6075/carolinahadad.com', [[468, 60], [300, 250], [728, 90]], 'div-gpt-ad-slot-1').addService(googletag.pubads());
+            var slot_2 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-2').addService(googletag.pubads());
+            var slot_3 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-hidden').addService(googletag.pubads());
+
+            var gptadslots = [ slot_1, slot_2, slot_3];
+
+            window.gptadslots = gptadslots;
+
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().disableInitialLoad();
+
+            googletag.enableServices();
+
+            // Batch SRA
+            googletag.pubads().refresh([gptadslots[0], gptadslots[1]]);
+        });
+
     </script>
 
-    <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-2').addService(googletag.pubads());
-
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-
-    <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-hidden').addService(googletag.pubads());
-
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
 
     <script>
         function toogleDiv() {
             var x = document.getElementById("initially-hidden");
             if (x.style.display === "none") {
+
+                googletag.pubads().refresh([window.gptadslots[2]]);
                 x.style.display = "block";
+                
             } else {
                 x.style.display = "none";
             }
