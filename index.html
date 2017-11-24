@@ -30,9 +30,8 @@
             var slot_3 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-hidden').addService(googletag.pubads());
             var slot_4 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-3').addService(googletag.pubads());
 
-            var gptadslots = [ slot_1, slot_2, slot_3];
 
-            window.gptadslots = gptadslots;
+            window.gptadslots = [slot_1, slot_2, slot_3, slot_4];
 
 
             googletag.pubads().enableSingleRequest();
@@ -41,7 +40,7 @@
             googletag.enableServices();
 
             // Batch SRA
-            googletag.pubads().refresh([slot_1, slot_2, slot_4);
+            googletag.pubads().refresh([slot_1, slot_2, slot_4]);
         });
 
     </script>
@@ -128,7 +127,7 @@
         </div>
 
 
-           <div class="row">
+        <div class="row">
 
             <div class="col s8 push-s4">
 
