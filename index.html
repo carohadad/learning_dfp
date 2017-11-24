@@ -40,7 +40,7 @@
             googletag.enableServices();
 
             // Batch SRA
-            googletag.pubads().refresh([gptadslots[0], gptadslots[1]]);
+            googletag.pubads().refresh(gptadslots);
         });
 
     </script>
@@ -51,9 +51,9 @@
             var x = document.getElementById("initially-hidden");
             if (x.style.display === "none") {
 
-                googletag.pubads().refresh([window.gptadslots[2]]);
+                //googletag.pubads().refresh([window.gptadslots[2]]);
                 x.style.display = "block";
-                
+
             } else {
                 x.style.display = "none";
             }
