@@ -25,9 +25,13 @@
     <script>
 
         googletag.cmd.push(function() {
-            var slot_1 = googletag.defineSlot('/6075/carolinahadad.com', [[468, 60], [300, 250], [728, 90]], 'div-gpt-ad-slot-1').addService(googletag.pubads());
+            var slot_1 = googletag.defineSlot('/6075/carolinahadad.com', [[468, 60], [300, 250], [728, 90]], 'div-gpt-ad-slot-1')
+                .addService(googletag.pubads())
+                .setForceSafeFrame(true);
             var slot_2 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-2').addService(googletag.pubads());
-            var slot_3 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-hidden').addService(googletag.pubads());
+            var slot_3 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-hidden')
+                .addService(googletag.pubads())
+                .setCollapseEmptyDiv(true);
             var slot_4 = googletag.defineSlot('/6075/carolinahadad.com', [300, 250], 'div-gpt-ad-slot-3').addService(googletag.pubads());
 
 
@@ -36,6 +40,7 @@
 
             googletag.pubads().enableSingleRequest();
             googletag.pubads().disableInitialLoad();
+
 
             googletag.enableServices();
 
