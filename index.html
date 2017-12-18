@@ -39,10 +39,14 @@
 
 
             googletag.pubads().enableSingleRequest();
-            googletag.pubads().disableInitialLoad();
-
+            googletag.pubads().enableSyncRendering();
 
             googletag.enableServices();
+
+            googletag.pubads().setSafeFrameConfig({
+                allowPushExpansion: true,
+                allowOverlayExpansion: false
+            });
 
             // Batch SRA
             googletag.pubads().refresh([slot_1, slot_2, slot_4]);
@@ -75,6 +79,8 @@
 
 
         <h1>Pagina de prueba</h1>
+
+        <a href="sync.html"> Ejemplo Sync </a>
 
         <div class="row">
             <!-- /6075/carolinahadad.com -->
